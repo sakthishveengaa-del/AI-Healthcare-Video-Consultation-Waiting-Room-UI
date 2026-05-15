@@ -1,0 +1,204 @@
+.msg-group {
+  display: flex;
+  gap: 12px;
+}
+
+.avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.msg-payload {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 85%;
+}
+
+.sender-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.msg-bubble-main {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.doctor .msg-bubble-main {
+  background: #f1f5f9;
+  color: #1e293b;
+  border-top-left-radius: 2px;
+}
+
+.self {
+  flex-direction: row-reverse;
+}
+
+.self .msg-bubble-main {
+  background: #2563eb;
+  color: white;
+  border-top-right-radius: 2px;
+}
+
+.self .sender-label {
+  text-align: right;
+}
+
+.self .msg-payload {
+  align-items: flex-end;
+}
+
+.msg-time-stamp {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.file-attachment-bubble {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.vitals-sync-bubble {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 200px;
+}
+
+.vs-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #15803d;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.vs-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vs-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.vs-label {
+  font-size: 0.6rem;
+  color: #166534;
+  font-weight: 700;
+}
+
+.vs-val {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #14532d;
+}
+
+.vs-val small {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+.prescription-msg-bubble {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #5b21b6;
+}
+
+.pres-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #5b21b6;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.pres-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pres-item {
+  padding-top: 8px;
+  border-top: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.pres-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.pres-med-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.p-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+.p-dose {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(124, 58, 237, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #6d28d9;
+}
+
+.p-freq {
+  font-size: 0.7rem;
+  color: #6d28d9;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.system-msg-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+}

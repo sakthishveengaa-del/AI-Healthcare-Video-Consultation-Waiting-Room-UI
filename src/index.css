@@ -86,11 +86,6 @@ body {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
 }
 
-@keyframes scanline {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
-}
-
 .scanline::after {
   content: "";
   position: absolute;
@@ -117,22 +112,21 @@ html, body {
 
 @media (max-width: 768px) {
   :root {
-    --radius-2xl: 16px; /* Scale down radii on mobile */
+    --radius-2xl: 16px; 
   }
   
   html {
-    font-size: 14px; /* Slightly smaller base font on mobile */
+    font-size: 14px; 
   }
   
   .glass-panel {
-    backdrop-filter: blur(10px); /* Lighter blur for performance on mobile */
+    backdrop-filter: blur(10px); 
   }
 }
 
 @media (pointer: coarse) {
-  /* Optimize for touch devices */
   button, a {
-    min-height: 44px; /* Ensure minimum touch target size for compliance */
+    min-height: 44px; 
   }
 }
 
@@ -156,7 +150,6 @@ html, body {
   border-right: 2px solid var(--primary);
 }
 
-/* --- Shared Branding --- */
 .app-logo {
   width: 42px;
   height: 42px;

@@ -1,0 +1,69 @@
+/* WaitingRoom.css - Premium Clean Design v2 */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-app: #fcfdfe;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-light: #f1f5f9;
+}
+
+.video-system-container {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-app);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Main Layout --- */
+.call-viewport {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.viewport-main {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 64px;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .viewport-main {
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-video-section {
+    width: 100%;
+  }
+
+  .hero-info-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  .readiness-panel {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .join-primary {
+    width: 100%;
+    max-width: 400px;
+  }
+}

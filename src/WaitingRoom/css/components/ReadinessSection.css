@@ -1,0 +1,89 @@
+.hero-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.join-content h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.join-content p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.readiness-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.readiness-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.readiness-item:hover {
+  transform: translateX(4px);
+  border-color: #2563eb;
+  background: #f8faff;
+}
+
+.ri-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ri-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ri-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.join-primary {
+  height: 64px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(37,99,235,0.2);
+  transition: all 0.3s;
+}
+
+.join-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.3);
+}
+
+.join-primary:disabled {
+  background: #f1f3f4;
+  color: #9aa0a6;
+  box-shadow: none;
+  cursor: not-allowed;
+}

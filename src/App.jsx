@@ -1,35 +1,28 @@
-import React, { useState } from 'react'
-import WaitingRoom from './components/WaitingRoom'
-import VideoConsultation from './components/VideoConsultation'
+// v1.0.1 - Refactored Structure
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { CallProvider } from './context/CallContext'
+import NewWaitingRoom from './WaitingRoom/jsx/NewWaitingRoom'
+import VideoCall from './VideoCall/jsx/VideoCall'
+import './WaitingRoom/css/WaitingRoom.css'
+import './VideoCall/css/VideoCall.css'
+
 
 function App() {
-  const [inCall, setInCall] = useState(false);
-  const [micOn, setMicOn] = useState(true);
-  const [videoOn, setVideoOn] = useState(true);
-  
-  const patient = { name: "Karthi M", age: 28, id: "APP-92834", type: "Cardio Follow-up" };
-  const doctor = { name: "Dr. Sathish S", specialty: "Interventional Cardiologist", time: "10:30 AM" };
-
   return (
-    <div className="App">
-      {!inCall ? (
-        <WaitingRoom 
-          onJoin={() => setInCall(true)} 
-          initialMic={micOn}
-          initialVideo={videoOn}
-          onSettingsChange={(m, v) => { setMicOn(m); setVideoOn(v); }}
-        />
-      ) : (
-        <VideoConsultation 
-          patient={patient} 
-          doctor={doctor} 
-          onLeave={() => setInCall(false)} 
-          initialMic={micOn}
-          initialVideo={videoOn}
-        />
-      )}
-    </div>
-  );
+    <CallProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<NewWaitingRoom />} />
+            <Route path="/consultation" element={<VideoCall />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </CallProvider>
+  )
 }
 
 export default App
+
+
